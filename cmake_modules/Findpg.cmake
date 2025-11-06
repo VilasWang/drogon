@@ -9,6 +9,8 @@
 
 find_package(PostgreSQL)
 if(PostgreSQL_FOUND)
+  message(STATUS "PostgreSQL inc: " ${PostgreSQL_INCLUDE_DIRS})
+  message(STATUS "PostgreSQL lib: " ${PostgreSQL_LIBRARIES})
   set(PG_LIBRARIES ${PostgreSQL_LIBRARIES})
   set(PG_INCLUDE_DIRS ${PostgreSQL_INCLUDE_DIRS})
   message(STATUS "pg inc: " ${PostgreSQL_INCLUDE_DIRS})

@@ -364,7 +364,7 @@ if (BUILD_POSTGRESQL)
     find_package(pg)
     if (pg_FOUND)
         message(STATUS "libpq inc path:" ${PG_INCLUDE_DIRS})
-        message(STATUS "libpq lib:" ${PG_LIBRARIES})
+        message(STATUS "libpq lib path:" ${PG_LIBRARIES})
         target_link_libraries(${PROJECT_NAME} PRIVATE pg_lib)
         set(DROGON_SOURCES
             ${DROGON_SOURCES}
